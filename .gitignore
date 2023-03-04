@@ -1,0 +1,12 @@
+.env*
+!.env.*.sample
+
+.build
+.swiftpm
+xcuserdata
+*.xcodeproj
+*.xcworkspace
+
+node_modules
+
+.DS_Store
