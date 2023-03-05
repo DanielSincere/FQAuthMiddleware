@@ -19,10 +19,6 @@ let package = Package(
     .target(name: "FQAuthMiddleware", dependencies: [
       .product(name: "Vapor", package: "vapor"),
       .product(name: "JWT", package: "jwt"),
-    ],
-    swiftSettings: [
-      .unsafeFlags(["-cross-module-optimization"],
-      .when(configuration: .release))
     ]),
     .testTarget(name: "FQAuthMiddlewareTests", dependencies: [
       .product(name: "XCTVapor", package: "vapor"),
