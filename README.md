@@ -6,7 +6,7 @@ Vapor package to consume the tokens created by an [FQAuth](https://github.com/Fu
 
 In the `dependencies` section of your `Package.swift`, add
 
-    .package(url: "https://github.com/FullQueueDeveloper/FQAuth", from: "0.1.0"),
+    .package(url: "https://github.com/FullQueueDeveloper/FQAuth", from: "0.1.1"),
 
 And in your server's target's `dependencies` section, add
 
