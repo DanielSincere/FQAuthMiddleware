@@ -30,6 +30,4 @@ public struct FQAuthMiddleware: Middleware {
         return next.respond(to: request)
       }
   }
-
-
 }

@@ -10,9 +10,7 @@ public struct FQAuthSessionToken: Content, Authenticatable, JWTPayload {
   public let iss: IssuerClaim
   public let deviceName: String
   public let roles: [String]
-  
-  public static let expirationTime: TimeInterval = 60 * 60 * 2
-  
+   
   public func verify(using signer: JWTKit.JWTSigner) throws {
     try exp.verifyNotExpired()
 
@@ -39,7 +37,11 @@ public struct FQAuthSessionToken: Content, Authenticatable, JWTPayload {
     self.roles = roles
   }
 
-  public enum Errors: Error {
+  public enum Errors: LocalizedError {
     case uuidNotParsableFromSubject
+    
+    public var errorDescription: String? {
+      "Could not parse UUID from JWT subject"
+    }
   }
 }
