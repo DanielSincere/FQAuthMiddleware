@@ -21,29 +21,10 @@ enum EnvVars: String, CaseIterable {
     return string
   }
 
-  struct EnvVarMissingError: Error {
+  struct EnvVarMissingError: LocalizedError {
     let name: String
-  }
-
-  struct EnvVarsMissingError: Error {
-    let names: [String]
-  }
-
-  static func ensureAllPresent() throws {
-    let names: [String] = Self.allCases
-      .compactMap { envVar in
-        do {
-          _ = try envVar.load()
-          return nil
-        } catch {
-          return envVar.rawValue
-        }
-      }
-
-    if names.isEmpty {
-      return
+    var errorDescription: String? {
+      "Expected a value for `\(name)` in the environment but it was missing"
     }
-
-    throw EnvVarsMissingError(names: names)
   }
 }
