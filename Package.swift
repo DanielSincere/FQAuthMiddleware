@@ -3,12 +3,12 @@
 import PackageDescription
 
 let package = Package(
-  name: "FQAuthMiddleware",
+  name: "SincereAuthMiddleware",
   platforms: [
     .macOS(.v12),
   ],
   products: [
-    .library(name: "FQAuthMiddleware", targets: ["FQAuthMiddleware"]),
+    .library(name: "SincereAuthMiddleware", targets: ["SincereAuthMiddleware"]),
   ],
   dependencies: [
     .package(url: "https://github.com/vapor/vapor.git", from: "4.65.1"),
@@ -16,13 +16,13 @@ let package = Package(
   ],
   targets: [
 
-    .target(name: "FQAuthMiddleware", dependencies: [
+    .target(name: "SincereAuthMiddleware", dependencies: [
       .product(name: "Vapor", package: "vapor"),
       .product(name: "JWT", package: "jwt"),
     ]),
-    .testTarget(name: "FQAuthMiddlewareTests", dependencies: [
+    .testTarget(name: "SincereAuthMiddlewareTests", dependencies: [
       .product(name: "XCTVapor", package: "vapor"),
-      "FQAuthMiddleware",
+      "SincereAuthMiddleware",
     ]),
   ]
 )

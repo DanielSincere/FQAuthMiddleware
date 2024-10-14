@@ -1,7 +1,7 @@
 import Foundation
 import Vapor
 
-public struct FQAuthMiddleware: Middleware {
+public struct SincereAuthMiddleware: Middleware {
 
   public let requiredRole: String?
   public init(requiredRole: String? = nil) {
@@ -11,11 +11,11 @@ public struct FQAuthMiddleware: Middleware {
   public func respond(to request: Vapor.Request,
                       chainingTo next: Vapor.Responder) -> NIOCore.EventLoopFuture<Vapor.Response> {
 
-    FQAuthAuthenticator()
+    SincereAuthAuthenticator()
       .authenticate(request: request)
       .flatMap { () in
 
-        guard let token = request.auth.get(FQAuthSessionToken.self) else {
+        guard let token = request.auth.get(SincereAuthSessionToken.self) else {
           return request.eventLoop.makeFailedFuture(Abort(.unauthorized))
         }
 

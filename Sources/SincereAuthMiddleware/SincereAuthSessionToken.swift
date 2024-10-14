@@ -2,7 +2,7 @@ import Vapor
 import JWT
 import Foundation
 
-public struct FQAuthSessionToken: Content, Authenticatable, JWTPayload {
+public struct SincereAuthSessionToken: Content, Authenticatable, JWTPayload {
 
   public let sub: SubjectClaim // user id
   public let exp: ExpirationClaim
