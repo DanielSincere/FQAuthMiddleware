@@ -1,12 +1,12 @@
 # SincereAuthMiddleware
 
-Vapor package to consume the tokens created by an [SincereAuth](https://github.com/FullQueueDeveloper/SincereAuth) server instance.
+Vapor package to consume the tokens created by an [SincereAuth](https://github.com/DanielSincere/SincereAuth) server instance.
 
 ## Installation
 
 In the `dependencies` section of your `Package.swift`, add
 
-    .package(url: "https://github.com/FullQueueDeveloper/SincereAuth", from: "0.1.1"),
+    .package(url: "https://github.com/DanielSincere/SincereAuth", from: "0.3.0"),
 
 And in your server's target's `dependencies` section, add
 
@@ -14,7 +14,7 @@ And in your server's target's `dependencies` section, add
 
 ## Environment setup
 
-Provide your auth private key as a Base64-encoded string in the environment variable `AUTH_PRIVATE_KEY`. This needs to be the same key used by your main instance of [SincereAuth](https://github.com/FullQueueDeveloper/SincereAuth).
+Provide your auth private key as a Base64-encoded string in the environment variable `AUTH_PRIVATE_KEY`. This needs to be the same key used by your main instance of [SincereAuth](https://github.com/DanielSincere/SincereAuth).
 
 ## Usage
 
