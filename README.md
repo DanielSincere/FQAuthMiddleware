@@ -38,8 +38,8 @@ To require a certain role for a route, add it to the initializer of the middlewa
 
 ## Example
 
-For an example, see https://github.com/FullQueueDeveloper/SincereAuth-Sample-Microservice
+For an example, see https://github.com/DanielSincere/SincereAuth-Sample-Microservice
 
 ## Sponsor me
 
-If you learned something or found this useful, you can show your appreciation by sponsoring me here on GitHub https://github.com/sponsors/FullQueueDeveloper
+If you learned something or found this useful, you can show your appreciation by sponsoring me here on GitHub https://github.com/sponsors/DanielSincere
